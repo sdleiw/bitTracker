@@ -40,3 +40,11 @@ public function __construct()
 php artisan serve
 goto http://127.0.0.1:8000
 ```
+
+how to extend
+---
+adapters for other platforms consists of 3 parts: an api client, a transformer and config
+
+- api client should implement `ApiClientInterface`
+- transformer should implement `TransformerInterface` and registered in the config
+- add the config in `config/api.php` and api credentials in `.env` 
