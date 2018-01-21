@@ -13,6 +13,9 @@ class Transformer
     /** @var array $transformers */
     public $transformers;
 
+    /**
+     * Transformer constructor.
+     */
     public function __construct()
     {
         $this->init();
@@ -37,15 +40,18 @@ class Transformer
     }
 
     /**
-     * @todo: add active flag in the config or env
      * @return array
      */
     protected function activeTransformers(): array
     {
-        return [
-            \App\Transformer\Binance::class,
-            \App\Transformer\Bitfinex::class,
-            \App\Transformer\HitBtc::class,
-        ];
+        $activeTransformers = [];
+        $config = config('api');
+        foreach ($config as $name => $platform) {
+            if ($platform['active'] && $platform['api-key'] && $platform['api-secret']) {
+                $activeTransformers[] = $platform['transformer'];
+            }
+        }
+
+        return $activeTransformers;
     }
 }
