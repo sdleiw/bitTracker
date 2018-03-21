@@ -43,6 +43,7 @@ class Bitfinex extends Template
             if (array_key_exists($symbol, $mapper)) {
                 $symbol = $mapper[$symbol];
             }
+            // @todo: check locked amount and price
             $balance->usd = $balance->amount * $prices[strtoupper($symbol)];
             $balance->asset = strtoupper($balance->currency);
 

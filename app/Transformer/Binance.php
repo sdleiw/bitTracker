@@ -41,8 +41,8 @@ class Binance extends Template
                 $symbol = strtoupper($mapper[$symbol]);
             }
             $price = $prices[$symbol] ?? 0;
-            $balance->usd = $balance->free * $price;
-            $balance->amount = $balance->free;
+            $balance->usd = ($balance->free + $balance->locked) * $price;
+            $balance->amount = $balance->free + $balance->locked;
 
             return $balance;
         }, $filteredAccount);

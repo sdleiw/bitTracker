@@ -37,7 +37,7 @@ class HitBtc extends Template
         $filteredAccount = $this->filterAccount($balanceRaw);
 
         return array_map(function ($balance) use ($prices) {
-            $symbol = $balance->currency;
+            $symbol = $balance->currency; // @todo: check reserved
             $balance->usd = $balance->available * $prices[$symbol];
             $balance->amount = $balance->available;
             $balance->asset = $balance->currency;
