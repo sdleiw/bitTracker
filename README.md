@@ -1,6 +1,11 @@
 bitTracker
 ===
 
+@todo:
+- add blockchain api
+- add support for small cap like nuls, qlink
+
+
 for those who want to track their own coin portfolio
 
 how to use
@@ -24,7 +29,7 @@ add api credentials in the `.env` file, supported platforms are
 - bitfinex
 - hitbtc
 
-config database if authentication is needed 
+config database if authentication is needed
 and add auth middleware in the dashboard controller `app/Http/Controllers/DashboardController.php`
 
 ```php
@@ -32,7 +37,7 @@ public function __construct()
 {
     $this->middleware('auth');
 }
-``` 
+```
 
 ### start server
 
@@ -47,4 +52,4 @@ adapters for other platforms consists of 3 parts: an api client, a transformer a
 
 - api client should implement `ApiClientInterface`
 - transformer should implement `TransformerInterface` and registered in the config
-- add the config in `config/api.php` and api credentials in `.env` 
+- add the config in `config/api.php` and api credentials in `.env`
