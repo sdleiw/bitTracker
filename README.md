@@ -53,7 +53,10 @@ todos
 ---
 
 - add blockchain api
-- add coin icons
+- add coin icons for templating
 - relaunch
     - extract to a package / packages
-    - code + template optimize
+    - code + template optimization
+    - restructure code, focusing on code reuse and extensibility
+    - use coinmarketcap api v2
+    
