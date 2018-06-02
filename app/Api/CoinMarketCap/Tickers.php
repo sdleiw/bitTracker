@@ -27,7 +27,7 @@ class Tickers extends AbstractApiClient
      * @param int $limit
      * @return mixed
      */
-    public function fetch($limit = 200): array
+    public function fetch($limit = 500): array
     {
         $query['limit'] = $limit;
         $response = $this->client->request('GET', 'ticker', [

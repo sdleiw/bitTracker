@@ -55,7 +55,7 @@ class Binance extends Template
     protected function filterAccount($binance): array
     {
         return array_filter($binance->balances, function ($balance) {
-            return $balance->free && $balance->free > 0;
+            return ($balance->free && $balance->free > 0) || ($balance->locked && $balance->locked > 0);
         });
     }
 }

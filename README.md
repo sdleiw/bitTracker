@@ -1,11 +1,6 @@
 bitTracker
 ===
 
-@todo:
-- add blockchain api
-- add support for small cap like nuls, qlink
-
-
 for those who want to track their own coin portfolio
 
 how to use
@@ -53,3 +48,12 @@ adapters for other platforms consists of 3 parts: an api client, a transformer a
 - api client should implement `ApiClientInterface`
 - transformer should implement `TransformerInterface` and registered in the config
 - add the config in `config/api.php` and api credentials in `.env`
+
+todos
+---
+
+- add blockchain api
+- add coin icons
+- relaunch
+    - extract to a package / packages
+    - code + template optimize
