@@ -52,11 +52,11 @@ adapters for other platforms consists of 3 parts: an api client, a transformer a
 todos
 ---
 
-- add blockchain api
-- add coin icons for templating
 - relaunch
     - extract to a package / packages
     - code + template optimization
     - restructure code, focusing on code reuse and extensibility
     - use coinmarketcap api v2
+    - add blockchain api
+    - add coin icons for templating
     
