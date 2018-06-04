@@ -9,11 +9,7 @@ how to use
 ### install
 
 ```bash
-git clone https://github.com/sdleiw/bitracker-demo
-cd bitracker-demo
-composer install
-cp .env.example .env
-php artisan key:generate
+composer create-project sdleiw/bitracker-demo
 # config .env api keys
 ```
 
