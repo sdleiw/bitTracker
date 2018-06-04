@@ -12,8 +12,8 @@ how to use
 git clone https://github.com/sdleiw/bitracker-demo
 cd bitracker-demo
 composer install
-php artisan vendor:publish --tag=config
-php artisan vendor:publish --tag=public
+cp .env.example .env
+php artisan key:generate
 # config .env api keys
 ```
 
